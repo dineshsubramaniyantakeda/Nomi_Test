@@ -1,0 +1,188 @@
+TEST PLAN
+NOMI Phase 1 – Study Ingestion & Intelligence Foundation (GI)
+1. Purpose
+This Test Plan defines the testing strategy, scope, approach, and deliverables for the NOMI Phase 1 project. Phase 1 establishes a Takeda-owned Medical Evidence Engineering foundation for GI studies, ensuring standardized ingestion, validation, QC, auditability, and output readiness.
+2.Project Overview
+The project is an AI-driven document ingestion, extraction, and curation platform designed to transform unstructured PDF documents into structured, ontology-aligned, and consumable data outputs. The system leverages cloud storage, AI models, vector search, and ontology mapping to ensure accurate data extraction, validation, and downstream integration.
+The platform enables users to securely upload documents, automatically extract and curate key parameters using AI, validate results through confidence scoring and ontology checks, and generate standardized output files for enterprise consumption.
+Key Objectives
+•	Enable secure PDF ingestion through a user-friendly web interface
+•	Automate document extraction and metadata generation
+•	Leverage AI models to curate structured data using predefined templates
+•	Apply confidence scoring and ontology validation to ensure data quality
+•	Generate standardized XLS outputs for downstream systems
+•	Maintain full auditability, traceability, and security throughout the workflow
+High-Level Workflow
+•	User Authentication & Upload
+ Users authenticate via SSO and upload PDF documents through the UI. Uploaded files are validated before processing begins.
+•	Raw Document Storage & Tracking
+ Uploaded PDFs are stored securely in Amazon S3. File details, hash values, and storage paths are recorded in the User File table to enable traceability and duplicate detection.
+•	Document Extraction & Logging
+ The extraction engine processes the PDF to identify text, tables, charts, and structural elements. Extraction activities are tracked in a dedicated log table with timestamps and status.
+•	Metadata Generation & Content Structuring
+ Document metadata such as page count, number of tables, charts, headings, and unmapped elements is generated. A markdown representation of the document is also created for downstream processing.
+•	Context Retrieval via Vector Search
+ Extracted content is indexed and searched using a vector database to retrieve relevant contextual information that enhances AI-driven curation accuracy.
+•	AI-Based Data Curation
+ A primary AI model processes extracted content using predefined templates to identify and populate structured parameters. Prompts and templates are centrally managed to ensure consistency.
+•	Confidence Scoring & Quality Validation
+ A secondary AI model evaluates the curated output and assigns confidence scores, helping identify low-confidence fields that may require review.
+•	Curated Data Persistence
+ Final curated values, confidence scores, page references, and user feedback are stored in a curated sheet table, serving as the system’s authoritative data source.
+•	Ontology Mapping & Knowledge Graph Update
+ Parameters requiring ontology validation are checked against existing ontology repositories. Unmatched values undergo manual curation and are stored in a graph database to enrich the knowledge graph.
+•	Output Generation & Distribution
+ The system generates parameter-level and data-level XLS files, which are stored in S3 and can be shared with downstream platforms such as LYRA.
+•	Audit, Security & Compliance
+ All user actions, AI decisions, and data transformations are logged to ensure compliance, traceability, and secure access control.
+Key System Components
+•	Web UI – User authentication, document upload, and interaction
+•	Cloud Storage (S3) – Raw and processed document storage
+•	Extraction Engine – Content parsing and structural analysis
+•	Vector Search (Databricks) – Context retrieval for AI processing
+•	AI Models – Data curation and confidence scoring
+•	Ontology & Graph Database – Semantic validation and knowledge enrichment
+•	Relational Tables – Tracking, metadata, and curated data storage
+•	XLS Generator – Standardized output creation
+•	Downstream Integration (LYRA) – Data consumption
+
+Business Value
+•	Reduces manual data extraction and curation effort
+•	Improves data accuracy and consistency using AI and ontology validation
+•	Ensures scalability and auditability for enterprise use
+•	Enables faster data availability for downstream analytical and operational systems
+3. Test Objectives
+The primary objectives of testing for this project are outlined below:
+Sprint 2 & 3 Objectives
+•	Validate end-to-end GI study ingestion workflow
+•	Verify accuracy of document extraction, data storage, data mapping, and data transformation
+•	Ensure audit trail, logging, and traceability are maintained throughout the process
+•	Validate GI output generation, including correct XLS template mapping
+System Integration Testing (SIT) Objectives
+•	Execute functional and integration testing in the SIT environment
+•	Validate complete end-to-end workflows
+•	Perform regression testing to ensure no impact from new changes
+•	Identify, track, and retest defects
+User Acceptance Testing (UAT) Objectives
+•	Support business users during UAT execution
+•	Validate business-critical GI workflows
+•	Manage UAT defect fixes and provide bug fix sign-off
+Reporting & Sign-Off Objectives
+•	Produce Test Execution Summary and Test Report
+•	Obtain formal SIT and UAT sign-offs
+Post-Production Objectives
+•	Provide hypercare support post-production release
+•	Validate system stability and address critical production issues
+
+4. Scope of Testing
+In Scope
+•	GI input ingestion via pdf inputs only, Language in only English, file are Journals and Oral Presentation only.
+•	Mandatory field validation
+•	Field value format validation
+•	Data transformation and schema mapping and validation
+•	Audit validated through FE – Preview page, through Show evidence feature
+•	User authentication and access via Single Sign-On (SSO)
+•	File validation and initiation of document processing
+•	Secure storage of raw and processed files in cloud storage
+•	End-to-end document extraction, parsing, and content structuring
+•	Metadata generation and tracking
+•	Markdown file creation
+•	Generation of standardized output files (Parameter XLS and Data XLS)
+Out of Scope
+•	AI/NLP extraction is optimized for unstructured English PDF journals and OPs; results may be inconsistent for non-PDF, non-English, or non-journal/OP documents.
+•	Visualization layer validation – LYRA integration and Visual validation
+•	Non-GI therapeutic areas
+•	Post Hypercare support
+•	LuminAI page and subsequent buttons Find Publications, LUMINAI Chatbot are static and has no functionalities
+
+5. Test Strategy
+The testing approach for this project is designed to ensure that the system meets defined requirements, business needs, and quality standards before release. Testing will be carried out in a phased manner, covering system integration, regression, and user acceptance activities.
+System Integration Testing (SIT) will be executed incrementally during each sprint to validate newly developed functionalities and integrations. Upon completion of all sprints, a consolidated SIT will be performed to validate end-to-end workflows and overall system stability.
+Defects identified during testing will be logged and managed in Jira, with prioritization based on severity and business impact. Fixed defects will undergo retesting, followed by regression testing to ensure no impact on existing functionality.
+User Acceptance Testing (UAT) will be conducted by business users to confirm that the application meets intended use and business requirements. Only after successful SIT and UAT sign-offs will the system be considered ready for production release.
+Post-deployment, a hypercare period will be supported to validate production stability and address any critical issues.
+6. Test Types. 
+•	Functional Testing
+•	Data Validation Testing
+•	Integration Testing
+•	Regression Testing
+•	SIT Testing
+•	UAT Support Testing
+•	Postproduction (Hypercare) Testing support 
+
+7. Test Environment
+Development (DEV) Environment: The DEV environment will be used for sprint-level deliverable testing by the development and QA teams to validate newly developed features and fixes before promotion.
+System Integration Testing (SIT) Environment: The SIT environment will be used for System Integration Testing (SIT) and User Acceptance Testing (UAT). It will be a controlled and stable environment, with access restricted to authorized users to ensure reliable and repeatable test execution.
+
+
+
+
+8. Test Data
+Test data will be prepared to cover positive, negative, boundary, and reprocessing scenarios to ensure complete validation of the system.
+•	Valid Test Data:
+ Valid GI datasets including GI and Non-GI journals, operational procedures (OPs), and other supported document types.
+•	Invalid / Negative Test Data:
+ Unsupported file formats, corrupted or unreadable PDFs, password-protected files, empty documents, oversized files, and incorrectly classified GI/Non-GI documents.
+•	Boundary & Edge-Case Test Data:
+ Documents with minimum and maximum page limits, large tables or charts, mixed GI and Non-GI content, unusual layouts, and minimal text content.
+•	Reprocessed Data:
+ Previously processed documents re-uploaded to validate version control, duplicate handling, and consistency of results across processing versions.
+9. Entry Criteria
+•	Approved and baselined business requirements and GI templates (Journals and OPs) within the TA-GI scope
+•	Qualified and available test environment with documented access controls
+•	Application builds successfully deployed following approved change control, with Installation Qualification (IQ) completed and Operational Qualification (OQ) approved
+•	Test data defined, reviewed, and approved in accordance with validation requirements
+10. Exit Criteria
+•	All planned test cases for the applicable sprint, SIT, and UAT phases have been executed and documented
+•	No open Critical or High severity defects; all remaining Medium and Low defects are reviewed, risk-assessed, and formally accepted
+•	Sprint-level SIT sign-off completed based on successful execution of sprint deliverables
+•	Formal SIT sign-off approved, authorizing progression to UAT
+•	UAT sign-off approved by business stakeholders, confirming system readiness for production use
+•	Hypercare sign-off completed post-production, confirming system stability and issue resolution
+•	Test Summary Report and Test Closure documentation completed, reviewed, and approved
+
+11. Test Deliverables
+•	Test Plan
+•	Test Cases
+•	Test Execution Report
+•	Defect Reports
+•	RTM
+•	Test Summary Report
+12. Roles & Responsibilities
+•	QA Engineer – Planning, coordination, reporting, Test execution and defect tracking
+•	Development Team – Defect fixes
+•	PO, SME – QC review and UAT
+•	Product Owner – Final approval
+13. Defect Management
+All defects identified during testing phases (SIT, UAT, and Hypercare) will be logged, tracked, prioritized, and managed using Jira in accordance with the project’s defect management process.
+Each defect will be evaluated based on severity, priority, and business impact to ensure appropriate resolution and timely closure.
+  
+
+Status Definitions:
+•	To Do: Defect logged and awaiting triage or assignment
+•	In Process: Defect actively being analyzed or fixed by the development team
+•	Blocked: Defect resolution is blocked due to dependency, environment, or external constraint
+•	Review: Fix completed and awaiting review or build deployment
+•	Test: Defect fix deployed and ready for retesting by QA
+•	Accept: Fix validated and accepted by QA/business
+•	Done: Defect closed with successful validation evidence
+
+Defect Retesting and Regression
+•	Once a defect is fixed and moved to Test status:
+•	QA will retest the defect to confirm resolution
+•	Regression testing will be performed to ensure that the fix has not impacted existing functionality.
+•	Test evidence for retesting and regression will be documented and maintained.
+Defect Closure Criteria
+A defect will be considered closed when:
+•	The fix is successfully retested
+•	No adverse impact is observed during regression testing
+•	Acceptance is provided by QA and/or business stakeholders
+•	The defect status is moved to Done in Jira
+14. Risks & Mitigation
+•	Template changes → Impact analysis and regression
+•	SME availability → Planned review cycles
+•	Schedule risk → Buffer planning
+15. Approvals
+•	Project Manager
+•	Product owner
+
