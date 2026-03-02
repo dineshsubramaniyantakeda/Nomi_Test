@@ -28,6 +28,10 @@
 1. User is redirected to the Takeda login page.
 2. User is navigated to ENTRA SSO for authentication. After successful authentication, user lands on the Takeda "One Evidence Synthesis Platform" Home Page.
 
+**Status**
+Not Executed
+
+
 ---
 
 #### TC_002 — Validating Invalid Username, Valid Password
