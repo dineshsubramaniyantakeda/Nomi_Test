@@ -197,7 +197,7 @@ Remarks:Working As Expected
 
 ---
 
-#### TC_005 — Validating the Home Page
+#### TC_008 — Validating the Home Page
 
 **Execution Details:**
 Execution Date: 
@@ -229,7 +229,7 @@ Remarks:
 
 ---
 
-#### TC_006 — Validating Valid PDF Upload Through File Browser
+#### TC_009 — Validating Valid PDF Upload Through File Browser
 
 **Execution Details:**
 Execution Date: 
@@ -258,7 +258,7 @@ Remarks:
 
 ---
 
-#### TC_007 — Validating Invalid File Through the File Browser
+#### TC_010 — Validating Invalid File Through the File Browser
 
 **Execution Details:**
 Execution Date: 
@@ -290,7 +290,7 @@ Remarks:
 
 ---
 
-#### TC_008 — Validating Drag and Drop File Upload
+#### TC_011 — Validating Drag and Drop File Upload
 
 **Execution Details:**
 Execution Date: 
