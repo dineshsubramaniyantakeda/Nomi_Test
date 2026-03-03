@@ -13,11 +13,11 @@
 #### TC_001 — Validating Valid Username and Password
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks: 
+Execution Date: 02-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks: Working as expected
 
 **Preconditions:**
 - Application URL is accessible
@@ -38,41 +38,41 @@ Remarks:
 
 ---
 
-#### TC_002 — Validating Invalid Username, Valid Password
+#### TC_002 — Validating valid Username, Empty Password
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks:
+Execution Date: 02-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks: Working As expected
 
 **Preconditions:**
 - Application URL is accessible
-- Invalid Username and valid Password
+- Valid Username 
 - User has Entra access
 
 **Steps:**
 
 1. Navigate to the Application URL.
-2. Enter an invalid username and valid password and click the Sign In button.
+2. Enter an valid username and valid password and click the Sign In button.
 3. Capture screenshot with error message.
 
 **Expected Results:**
 
 1. User is redirected to the Takeda login page.
-2. System displays "Error" message; user is not logged in and remains on the login page.
+2. System displays "Please Enter Your password" message 
 
 ---
 
 #### TC_003 — Validating Valid Username and Invalid Password
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks:
+Execution Date: 02-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks: Working as expected
 
 **Preconditions:**
 - Application URL is accessible
@@ -88,35 +88,110 @@ Remarks:
 **Expected Results:**
 
 1. User is redirected to the Takeda login page.
-2. System displays "Error" message; user is not logged in and remains on the login page.
+2. System displays "Your Account or Password is incorrect. If you Dont Remmber your password reset it now" message; user is not logged in and remains on the login page.
 
 ---
 
-#### TC_004 — Validating User Without Application Access
+#### TC_004 — Validating User accessing the NOMI Application from other environment
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks:
+Execution Date: 02-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks:Working As Expected
 
 **Preconditions:**
 - Application URL is accessible
-- User email is not part of the application
+- User is in non takeda environment
 
 **Steps:**
 
 1. Navigate to the Application URL.
-2. Enter username and password and click the Sign In button.
+
+**Expected Results:**
+
+1. User getting the site cannot be reach error message
+
+---
+
+
+#### TC_005 — Validating without user name if user clicks the nect button
+
+**Execution Details:**
+Execution Date: 02-Mar-2026
+Executed By: Diensh subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks:Working As Expected
+
+**Preconditions:**
+- Application URL
+
+**Steps:**
+
+1. Navigate to the Application URL.
+2. Leave Email Field as Empty click the Next button.
 3. Capture screenshot with error message.
 
 **Expected Results:**
 
 1. User is redirected to the Takeda login page.
-2. System displays "Error" message; user is not logged in and remains on the login page.
+2. System displays "Enter a Valid Email address ,Phone number or Skype name" error message; user is not logged in and remains on the login page.
 
 ---
+
+#### TC_006 — Validating the error message while entering the invalid domain name in mail address
+
+**Execution Details:**
+Execution Date: 02-Mar-2026
+Executed By: Diensh subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks:Working As Expected
+
+**Preconditions:**
+- Application URL
+- Invalid email
+
+**Steps:**
+
+1. Navigate to the Application URL.
+2. Entering the Invalid domain name email address
+3. click Next
+
+**Expected Results:**
+
+1. User is redirected to the Takeda login page.
+2. System displays "We Couldn't find an account with that user name" error message; user is not logged in and remains on the login page.
+
+---
+
+#### TC_007 — Validating the error message while entering the invalid username and correct Domain name
+
+**Execution Details:**
+Execution Date: 02-Mar-2026
+Executed By: Diensh subramaniyan
+Build Version: V 1.0
+Status: Pass
+Remarks:Working As Expected
+
+**Preconditions:**
+- Application URL
+- Invalid email
+
+**Steps:**
+
+1. Navigate to the Application URL.
+2. Entering the Invalid user name and correct domain name email address
+3. click Next
+
+**Expected Results:**
+
+1. User is redirected to the Takeda login page.
+2. System displays "The username may be incorrect make sure you typed it correctly otherwise contact your admin" error message; user is not logged in and remains on the login page.
+
+
 
 ### Scenario: Validating the Home Page
 
