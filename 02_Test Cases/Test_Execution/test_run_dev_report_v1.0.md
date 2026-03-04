@@ -53,6 +53,8 @@
 
 - SSO login working as expected.
 - Facing issue after uploading 
+- Recent Files Toggle Bar Misaligned in Upload and Preview Pages
+- Result payload is still unavailable while uploading "LOVE-CD D'Haens UEG Week 2024.pdf
 
 
 ---
