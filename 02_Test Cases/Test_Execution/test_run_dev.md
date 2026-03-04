@@ -316,7 +316,7 @@ Remarks:
 
 ---
 
-#### TC_009 — Validating Invalid PDF File Through Drag and Drop
+#### TC_012 — Validating Invalid PDF File Through Drag and Drop
 
 **Execution Details:**
 Execution Date: 
@@ -342,7 +342,7 @@ Remarks:
 
 ---
 
-#### TC_0010 — Validating Invalid File (XLSX) Format Through Drag and Drop
+#### TC_0013 — Validating Invalid File (XLSX) Format Through Drag and Drop
 
 **Execution Details:**
 Execution Date: 
@@ -368,7 +368,7 @@ Remarks:
 
 ---
 
-#### TC_011 — Validating Invalid File (DOC) Format Through Drag and Drop
+#### TC_014 — Validating Invalid File (DOC) Format Through Drag and Drop
 
 **Execution Details:**
 Execution Date: 
@@ -394,7 +394,7 @@ Remarks:
 
 ---
 
-#### TC_012 — Validating Invalid File (CSV) Format Through Drag and Drop
+#### TC_015 — Validating Invalid File (CSV) Format Through Drag and Drop
 
 **Execution Details:**
 Execution Date: 
@@ -424,7 +424,7 @@ Remarks:
 
 ---
 
-#### TC_013 — Validating Valid PDF Article Upload and Replace Article
+#### TC_016 — Validating Valid PDF Article Upload and Replace Article
 
 **Execution Details:**
 Execution Date: 
@@ -459,7 +459,7 @@ Remarks:
 
 ---
 
-#### TC_014 — Validating the Valid PDF Article Begin Synthesization Flow
+#### TC_017 — Validating the Valid PDF Article Begin Synthesization Flow
 
 **Execution Details:**
 Execution Date: 
@@ -496,7 +496,7 @@ Remarks:
 
 ---
 
-#### TC_015 — Validating Structure Summary for New PDF
+#### TC_018 — Validating Structure Summary for New PDF
 
 **Execution Details:**
 Execution Date: 
@@ -520,7 +520,7 @@ Remarks:
 
 ---
 
-#### TC_016 — Validating Structure Summary for Existing Uploaded PDF
+#### TC_019 — Validating Structure Summary for Existing Uploaded PDF
 
 **Execution Details:**
 Execution Date: 
@@ -558,7 +558,7 @@ Remarks:
 
 ---
 
-#### TC_017 — Overview Part
+#### TC_020 — Overview Part
 
 **Execution Details:**
 Execution Date: 
@@ -592,7 +592,7 @@ Remarks:
 
 ---
 
-#### TC_018 — Endpoint Definitions Part
+#### TC_021 — Endpoint Definitions Part
 
 **Execution Details:**
 Execution Date: 
@@ -626,7 +626,7 @@ Remarks:
 
 ---
 
-#### TC_019 — Limitations Part
+#### TC_022 — Limitations Part
 
 **Execution Details:**
 Execution Date: 
@@ -660,7 +660,7 @@ Remarks:
 
 ---
 
-#### TC_020 — Patient Groups Part
+#### TC_023 — Patient Groups Part
 
 **Execution Details:**
 Execution Date: 
@@ -694,7 +694,7 @@ Remarks:
 
 ---
 
-#### TC_021 — Study Result Part
+#### TC_024 — Study Result Part
 
 **Execution Details:**
 Execution Date: 
@@ -728,7 +728,7 @@ Remarks:
 
 ---
 
-#### TC_022 — Treatment Protocol Part
+#### TC_025 — Treatment Protocol Part
 
 **Execution Details:**
 Execution Date: 
@@ -762,7 +762,7 @@ Remarks:
 
 ---
 
-#### TC_023 — Validating Existing Uploaded PDF Article Begin Synthesization Flow
+#### TC_026 — Validating Existing Uploaded PDF Article Begin Synthesization Flow
 
 **Execution Details:**
 Execution Date: 
@@ -797,7 +797,7 @@ Remarks:
 
 ---
 
-#### TC-024 — Navigation Checks Across Pages
+#### TC-027 — Navigation Checks Across Pages
 
 **Execution Details:**
 Execution Date: 
@@ -828,11 +828,7 @@ Remarks:
 
 ---
 
-## Sheet 2: Recent File
-
----
-
-### Test Case — Valid PDF Article Upload and Validating Recent Files View
+#### TC-028 Valid PDF Article Upload and Validating Recent Files View
 
 **Execution Details:**
 Execution Date: 
@@ -863,7 +859,7 @@ Remarks:
 
 ---
 
-### Test Case — Lyra Button Validation
+#### TC-029 Test Case — Lyra Button Validation
 
 **Execution Details:**
 Execution Date: 
@@ -892,5 +888,4 @@ Remarks:
 
 ---
 
-*Sheet 3: LuminiAI — No test cases recorded.*
 
