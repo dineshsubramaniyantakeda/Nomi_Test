@@ -18,7 +18,7 @@
 
 | Total Test Cases | Executed | Passed | Failed | Blocked | Not Executed |
 |------------------|----------|--------|--------|---------|--------------|
-| 24 | 7 | 7 | 0 | 0 | 17 |
+|      29          |      08  | 07     |    01  | 01      |           21 |
 
 ---
 
@@ -33,6 +33,8 @@
 | TC_005 | Validating without user name if user clicks the nect button | ✅ Passed | - | Working as expected  |
 | TC_006 | Validating the error message while entering the invalid domain name in mail address | ✅ Passed | — | Working as expected  |
 | TC_007 | Validating the error message while entering the invalid username and correct Domain name | ✅ Passed | — | Working as expected |
+| TC_008 | Validating the Home Page | ✅ Passed | — | Working as expected |
+| TC_009 | Validating Valid PDF Upload Through File Browser |  Failed | GPDDDTME-337 | Facing issue after uplaoding the file |
 
 ---
 
@@ -40,6 +42,9 @@
 
 | Defect ID | Severity | Status | Description |
 |-----------|----------|--------|------------|
+|GPDDDTME-337| High |Dev inprocess|Structure Summary and Quality Score Not Populating|
+|GPDDDTME-338| High | Dev In process |Recent Files Toggle Bar Misaligned in Upload and Preview Pages |
+|GPDDDTME-314| High | Dev In process| Result payload is still unavailable while uploading "LOVE-CD D'Haens UEG Week 2024.pdf|
 
 
 ---
@@ -47,13 +52,14 @@
 ## 5️⃣ Observations
 
 - SSO login working as expected.
+- Facing issue after uploading 
 
 
 ---
 
 ## 6️⃣ Risks / Blockers
 
-- None
+- Audit and uploading getting error
 
 ---
 

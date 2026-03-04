@@ -200,11 +200,11 @@ Remarks:Working As Expected
 #### TC_008 — Validating the Home Page
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks:
+Execution Date: 03-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V1.o
+Status: Pass
+Remarks: Working as Expected
 
 **Preconditions:**
 - Application URL is accessible
@@ -232,11 +232,11 @@ Remarks:
 #### TC_009 — Validating Valid PDF Upload Through File Browser
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
-Build Version: 
-Status: 
-Remarks:
+Execution Date:03-Mar-2026
+Executed By: Dinesh Subramaniyan
+Build Version: V1.0
+Status: Failed
+Remarks:"Facing error bug raised"
 
 **Preconditions:**
 - Complete user login
