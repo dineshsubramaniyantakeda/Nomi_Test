@@ -1,4 +1,4 @@
-# NOMI – SIT Test Run Report
+# NOMI – Test Run Report
 
 ---
 
