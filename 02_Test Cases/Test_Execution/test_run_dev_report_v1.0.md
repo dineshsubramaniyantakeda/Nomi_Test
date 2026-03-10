@@ -34,7 +34,7 @@
 | TC_006 | Validating the error message while entering the invalid domain name in mail address | ✅ Passed | — | Working as expected  |
 | TC_007 | Validating the error message while entering the invalid username and correct Domain name | ✅ Passed | — | Working as expected |
 | TC_008 | Validating the Home Page | ✅ Passed | — | Working as expected |
-| TC_009 | Validating Valid PDF Upload Through File Browser |  Failed | GPDDDTME-337 | Facing issue after uplaoding the file |
+| TC_009 | Validating Valid PDF Upload Through File Browser |  ❌ Failed | GPDDDTME-337 | Facing issue after uplaoding the file |
 
 ---
 

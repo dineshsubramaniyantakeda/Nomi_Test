@@ -261,11 +261,11 @@ Remarks:"Facing error bug raised"
 #### TC_010 — Validating Invalid File Through the File Browser
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
+Execution Date:05-Mar-2026 
+Executed By: Dinesh Subramaniyan
 Build Version: 
-Status: 
-Remarks:
+Status: Pass
+Remarks:Working as expected
 
 **Preconditions:**
 - Complete user login
@@ -275,14 +275,12 @@ Remarks:
 
 1. In Takeda Home page under upload file section, click "Start Processing."
 2. Choose Therapeutic Area as GI, Document Type as Manuscript, then click the "Select PDF File" button.
-3. Click the Open button.
-4. Capture the screenshot of the page.
 
 **Expected Results:**
 
 1. User navigated to upload file page.
 2. File Explorer opens. Verify that files other than PDF cannot be selected.
-3. Check the Error message.
+
 
 ---
 
@@ -293,11 +291,11 @@ Remarks:
 #### TC_011 — Validating Drag and Drop File Upload
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
+Execution Date:05-Mar-2026 
+Executed By: Dinesh Subramaniyan
 Build Version: 
-Status: 
-Remarks:
+Status: Pass
+Remarks:Working as expected
 
 **Preconditions:**
 - Complete user login
@@ -319,11 +317,11 @@ Remarks:
 #### TC_012 — Validating Invalid PDF File Through Drag and Drop
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
+Execution Date:05-Mar-2026 
+Executed By: Dinesh Subramaniyan
 Build Version: 
-Status: 
-Remarks:
+Status: Pass
+Remarks:Working as expected
 
 **Preconditions:**
 - Complete user login
@@ -333,23 +331,24 @@ Remarks:
 
 1. In Takeda Home page under upload file section, click "Start Processing."
 2. Choose Therapeutic Area as GI, Document Type as Manuscript, then drag and drop the invalid PDF file.
-3. Capture the screenshot of the page.
+3. Click the Begin Synthesisation
 
 **Expected Results:**
 
 1. User navigated to upload file page.
-2. Check the Error message.
+2. Selected file name and file size are displayed. File is in "Ready to Process" state. Begin Synthesization and Replace Article buttons are enabled.
+3.Process Will start and Error message will thrown.
 
 ---
 
 #### TC_0013 — Validating Invalid File (XLSX) Format Through Drag and Drop
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
+Execution Date:05-Mar-2026 
+Executed By: Dinesh Subramaniyan
 Build Version: 
-Status: 
-Remarks:
+Status: Pass
+Remarks:Working as expected
 
 **Preconditions:**
 - Complete the user login step
@@ -359,23 +358,23 @@ Remarks:
 
 1. In Takeda Home page under upload file section, click "Start Processing."
 2. Choose Therapeutic Area as GI, Document Type as Manuscript, then drag and drop the invalid format (XLSX) file.
-3. Capture the screenshot of the page.
+
 
 **Expected Results:**
 
 1. User navigated to upload file page.
-2. Check the Error message.
+2. The application didnt allow user to to upload XLSX format file
 
 ---
 
 #### TC_014 — Validating Invalid File (DOC) Format Through Drag and Drop
 
 **Execution Details:**
-Execution Date: 
-Executed By: 
+Execution Date:05-Mar-2026 
+Executed By: Dinesh Subramaniyan
 Build Version: 
-Status: 
-Remarks:
+Status: Pass
+Remarks:Working as expected
 
 **Preconditions:**
 - Complete the user login step
@@ -385,12 +384,11 @@ Remarks:
 
 1. In Takeda Home page under upload file section, click "Start Processing."
 2. Choose Therapeutic Area as GI, Document Type as Manuscript, then drag and drop the invalid format (DOC) file.
-3. Capture the screenshot of the page.
 
 **Expected Results:**
 
 1. User navigated to upload file page.
-2. Check the Error message.
+2. The application didnt allow user to to upload DOC format file
 
 ---
 
@@ -888,4 +886,104 @@ Remarks:
 
 ---
 
+#### TC-030 — Validating the Non-GI Therapeutic Area File Upload
 
+**Execution Details:**  
+Execution Date:  
+Executed By:  
+Build Version:  
+Status:  
+Remarks:  
+
+**Preconditions:**
+- Application URL accessible
+- Valid Username and Password
+- SSO Configuration enabled
+- Non-GI therapeutic area PDF file available in valid PDF format
+
+**Steps:**
+
+1. Navigate to the application URL, enter valid username and password, and click the **Sign In** button.
+2. After successful login, navigate to the **Home Page**.
+3. Click **Start Processing**.
+4. In upload page select the therapetical area and File type
+4. Upload the **Non-GI therapeutic area PDF file** using the upload option.
+5. Click **Begin Synthesisation** and observe the system behavior.
+
+**Expected Results:**
+
+1. User lands on the Takeda login page, is redirected to **OKTA SSO**, and after successful authentication lands on the **One Evidence Synthesis Platform Home Page**.
+2. The system should validate the uploaded file.
+3. If the uploaded file belongs to a **Non-GI therapeutic area**, the system should either show an **appropriate validation message** or prevent further processing.
+4. The file should **not proceed to synthesization/processing** if the therapeutic area is not supported.
+
+---
+
+#### TC-031 Test Case — Validating Large File Upload Scenario
+
+**Execution Details:**  
+Execution Date:  
+Executed By:  
+Build Version:  
+Status:  
+Remarks:  
+
+**Preconditions:**
+- Application URL accessible
+- Valid Username and Password
+- SSO Configuration enabled
+- Large PDF file available (near or above the supported file size limit)
+
+**Steps:**
+
+1. Navigate to the application URL, enter valid username and password, and click the **Sign In** button.
+2. After successful login, navigate to the **Home Page**.
+3. Click **Start Processing**.
+4. Upload a **large PDF file** using the upload option.
+5. Click **Upload / Begin Processing**.
+6. Observe the system behavior during file upload and processing.
+
+**Expected Results:**
+
+1. User lands on the Takeda login page, is redirected to **Entra SSO**, and after successful authentication lands on the **One Evidence Synthesis Platform Home Page**.
+2. The system should allow upload if the file size is within the supported limit.
+3. The system should display a **validation or error message** if the file size exceeds the supported limit.
+4. The application should **handle the large file without crashing or performance issues**.
+5. Upload status should be clearly displayed to the user (Uploading / Processing / Failed / Completed).
+
+---
+
+#### TC-032 Test Case — Validating Duplicate File Upload While First File is in Processing
+
+**Execution Details:**  
+Execution Date:  
+Executed By:  
+Build Version:  
+Status:  
+Remarks:  
+
+**Preconditions:**
+- Application URL accessible
+- Valid Username and Password
+- SSO Configuration enabled
+- Valid GI therapeutic area PDF file available
+- File upload and processing functionality is working
+
+**Steps:**
+
+1. Navigate to the application URL, enter valid username and password, and click the **Sign In** button.
+2. After successful login, navigate to the **Home Page**.
+3. Click **Start Processing**.
+4. Upload a valid **PDF file** and start the processing.
+5. While the first file is still in **Processing** status, upload the **same PDF file again**.
+6. Observe whether the system allows the second file to be uploaded and processed.
+7. Once both files are processed, verify the **extracted data** from both uploads.
+
+**Expected Results:**
+
+1. User lands on the Takeda login page, is redirected to **OKTA SSO**, and after successful authentication lands on the **One Evidence Synthesis Platform Home Page**.
+2. The system should allow the **same file to be uploaded again** even if the first upload is still in **Processing** status.
+3. The second file should also **enter the processing workflow independently**.
+4. The system should properly **fetch and extract data for both files**.
+5. The **extracted data for both uploads should be identical** since the source file is the same.
+6. Both files should be visible in the **Recent Files / Processing list with their respective statuses**.
