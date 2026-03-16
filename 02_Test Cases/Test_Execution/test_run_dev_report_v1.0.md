@@ -18,7 +18,7 @@
 
 | Total Test Cases | Executed | Passed | Failed | Blocked | Not Executed |
 |------------------|----------|--------|--------|---------|--------------|
-|      29          |      08  | 07     |    01  | 01      |           21 |
+|      32          |    09    |   08   |   01   |    0    |     23       |
 
 ---
 
@@ -33,8 +33,19 @@
 | TC_005 | Validating without user name if user clicks the nect button | ✅ Passed | - | Working as expected  |
 | TC_006 | Validating the error message while entering the invalid domain name in mail address | ✅ Passed | — | Working as expected  |
 | TC_007 | Validating the error message while entering the invalid username and correct Domain name | ✅ Passed | — | Working as expected |
-| TC_008 | Validating the Home Page | ✅ Passed | — | Working as expected |
+| TC_008 | Validating the Home Page | ❌ Failed | — |  |
 | TC_009 | Validating Valid PDF Upload Through File Browser |  ❌ Failed | GPDDDTME-337 | Facing issue after uplaoding the file |
+| TC_010 | Validating Invalid File Through the File Browser | ✅ Passed | — | Working as expected |
+| TC_011 | Validating Drag and Drop File Upload |✅ Passed | — | Working as expected |
+| TC_012 | Validating Invalid PDF File Through Drag and Drop | ✅ Passed | — | Working as expected |
+| TC_013 | Validating Invalid File (XLSX) Format Through Drag and Drop |✅ Passed | — | Working as expected |
+| TC_014 | Validating Invalid File (DOC) Format Through Drag and Drop | ✅ Passed | — | Working as expected |
+| TC-030 | Validating the Non-GI Therapeutic Area File Upload|  |  |  |
+| TC-031 | Validating Large File Upload Scenario|  |  |  |
+
+
+
+
 
 ---
 
