@@ -1046,3 +1046,32 @@ Remarks:
 
 
 ---
+
+#### TC_033 — Validate Download Full Files Functionality
+
+**Execution Details:**
+
+**Preconditions:**
+- User is logged into the NOMI application
+- Valid PDF file is available for upload
+
+**Steps:**
+
+1. Log in to the NOMI application.
+2. Navigate to the **Upload PDF** page.
+3. Upload a valid PDF file.
+4. Click on **Begin Synthesization**.
+5. Wait until the processing is completed.
+6. Navigate to the **Preview Page**.
+7. Scroll to the bottom of the page.
+8. Click on the **Download Full Files** button.
+
+**Expected Results:**
+
+1. File processing completes successfully and Preview Page is displayed.
+2. On clicking the **Download Full Files** button, an **XLSX file** is downloaded.
+3. The downloaded file contains the following sheets:
+   - study_info
+   - chart_data
+   - chart_study_metadata
+   - patient_characteristics

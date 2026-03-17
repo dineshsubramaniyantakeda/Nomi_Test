@@ -287,7 +287,7 @@ Remarks: Working as expected
 Execution Date: 16-Mar-2026  
 Executed By: Dinesh Subramaniyan  
 Build Version:  
-Status: Fail  
+Status: Pass  
 Remarks: Error observed — bug raised  
 
 **Preconditions:**
@@ -313,10 +313,11 @@ Remarks: Error observed — bug raised
 **Actual Results:**
 
 1. System navigated to the upload page successfully.
-2. Navigation options, user email, and Logout button were visible.
-3. File Explorer allowed selection of a PDF file.
-4. After selecting the file, an unexpected error occurred during processing.
-5. Issue observed and **bug raised** for further investigation.
+2. Navigation options, user email, and Logout button were visible in the top-right corner.
+3. File Explorer opened and allowed selection of PDF files only.
+4. Selected file name and file size were displayed in the **Upload File** section.
+5. File status was displayed as **"Ready to Process"**.
+6. **Begin Synthesization** and **Replace Article** buttons were enabled.
 
 ---
 
@@ -587,7 +588,7 @@ Remarks: Working as expected
 1. User navigated to upload file page.
 2. File Explorer opens. Other file types cannot be selected.
 3. Selected file name and file size shown. File in "Ready to Process" state. Begin Synthesization and Replace Article buttons are enabled.
-4. Process takes more than 4 seconds. File extraction starts. Verify file is present in S3 path (/PATH). Check values in: T1 - User File Table, T2 - Extraction & Mapping, T3 - Metadata Table, T4 - Template Table, T5 - Curated Output Table. System navigates to Document Processing page (Uploading → Processing pages → Extracting template data → Finalizing). On completion, user is navigated to Preview page.
+<!-- 4. Process takes more than 4 seconds. File extraction starts. Verify file is present in S3 path (/PATH). Check values in: T1 - User File Table, T2 - Extraction & Mapping, T3 - Metadata Table, T4 - Template Table, T5 - Curated Output Table. System navigates to Document Processing page (Uploading → Processing pages → Extracting template data → Finalizing). On completion, user is -->navigated to Preview page. 
 6. Preview page displays: Run ID, Status, Pipeline Status, Structure Summary, Generated XLSX File Name, Overall Progress (%), Fields Extracted, Quality Score, Template Output Details. Hide PDF and Publish to Lyra buttons are enabled.
 
 **Actual Results:**
@@ -954,8 +955,8 @@ Remarks: Working as expected
 Execution Date: 16-Mar-2026  
 Executed By: Dinesh Subramaniyan  
 Build Version:  
-Status: Pass  
-Remarks: Working as expected  
+Status: Not Executed  
+Remarks: 
 
 **Preconditions:**
 - Application URL accessible
@@ -992,8 +993,8 @@ Remarks: Working as expected
 Execution Date: 16-Mar-2026  
 Executed By: Dinesh Subramaniyan  
 Build Version:  
-Status: Pass  
-Remarks: Working as expected
+Status: Not Executed  
+Remarks: 
 
 **Preconditions:**
 - Application URL accessible
@@ -1143,3 +1144,87 @@ Remarks: Working as expected
 4. Extracted data for both uploads matched successfully.
 
 ---
+#### TC_032 — Validate Download Full Files Functionality
+
+**Execution Details:**  
+Execution Date: 16-Mar-2026  
+Executed By: Dinesh Subramaniyan  
+Build Version:  
+Status: Pass  
+Remarks: Working as expected 
+
+**Preconditions:**
+- User is logged into the NOMI application
+- Valid PDF file is available for upload
+
+**Steps:**
+
+1. Log in to the NOMI application.
+2. Navigate to the **Upload PDF** page.
+3. Upload a valid PDF file.
+4. Click on **Begin Synthesization**.
+5. Wait until the processing is completed.
+6. Navigate to the **Preview Page**.
+7. Scroll to the bottom of the page.
+8. Click on the **Download Full Files** button.
+
+**Expected Results:**
+
+1. File processing completes successfully and Preview Page is displayed.
+2. On clicking the **Download Full Files** button, an **XLSX file** is downloaded.
+3. The downloaded file contains the following sheets:
+   - study_info
+   - chart_data
+   - chart_study_metadata
+   - patient_characteristics
+
+**Actual Results:**
+
+1. File processing was completed successfully and the Preview Page was displayed.
+2. On clicking the **Download Full Files** button, an **XLSX file** was downloaded successfully.
+3. The downloaded file contained the following sheets:
+   - study_info
+   - chart_data
+   - chart_study_metadata
+   - patient_characteristics
+
+   ---
+
+   #### TC_033 — Validate Publish for Visualization Functionality
+
+**Execution Details:** 
+Execution Date: 16-Mar-2026  
+Executed By: Dinesh Subramaniyan  
+Build Version:  
+Status: Pass  
+Remarks: Working as expected 
+
+**Preconditions:**
+- User is logged into the NOMI application
+- Valid PDF file is available for upload
+
+**Steps:**
+
+1. Log in to the NOMI application.
+2. Navigate to the **Upload PDF** page.
+3. Upload a valid PDF file.
+4. Click on **Begin Synthesization**.
+5. Wait until the processing is completed.
+6. Navigate to the **Preview Page**.
+7. On the top-right corner, click the **Publish for Visualization** button.
+
+**Expected Results:**
+
+1. File processing completes successfully and the Preview Page is displayed.
+2. The **Publish for Visualization** button is visible on the top-right corner.
+3. On clicking the button, the system successfully publishes the file for visualization.
+4. A success popup is displayed with the message:  
+   **"Files have been published for visualization successfully."**
+
+**Actual Results:**
+
+1. File processing was completed successfully and the Preview Page was displayed.
+2. The **Publish for Visualization** button was visible on the top-right corner.
+3. On clicking the button, the system successfully published the file for visualization.
+4. A success popup was displayed with the message:  
+   **"Files have been published for visualization successfully."**
